@@ -142,299 +142,153 @@
 }
 
 /*** Navbar Start ***/
-.header-top {
-    height: 100%;
-    position: relative;
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 14px 0;
+    font-size: 14px;
 }
 
-.header-top::after {
-    content: "";
-    position: absolute;
-    overflow: hidden;
-    width: 16%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--bs-dark);
-    z-index: 1;
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
-.topbar .login-btn {
-    position: relative;
-}
-
-.topbar .login-btn::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0;
-    right: -1px;
-    background: var(--bs-primary);
-    /*transform: skew(18deg);*/
-}
-
-@media (min-width: 992px) {
-    .header-top::before {
-        content: "";
-        position: absolute;
-        overflow: hidden;
-        width: 100%;
-        height: 45px;
-        top: 0;
-        right: 0;
-        background: var(--bs-dark);
-        z-index: -1;
-    }
-
-    .navbar-brand-2 {
-        display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .header-top {
-        max-height: 80px;
-    }
-
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .header-top .container {
-        max-height: 80px;
-    }
-
-    .navbar-brand {
-        display: none;
-    }
-
-    .navbar-brand-2 {
-        position: relative;
-        overflow: hidden;
-        width: 180px;
-        height: 100%;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        z-index: 99;
-    }
-
-    .navbar-brand-2::before {
-        content: "";
-        position: absolute;
-        overflow: hidden;
-        width: 100%;
-        height: 600px;
-        top: -200px;
-        right: 18px;
-        background: var(--bs-dark);
-        transform: rotate(-18deg);
-        z-index: -1;
-    }
-
-    .navbar.navbar-light {
-        height: 100%;
-        padding: 0;
-    }
-
-    .navbar .navbar-collapse {
-        margin-top: -20px;
-    }
-
-}
-
-.navbar-brand {
-    position: relative;
-    overflow: hidden;
-    padding: 40px 50px 40px 0;
-}
-
-.navbar-brand::before {
-    content: "";
-    position: absolute;
-    overflow: hidden;
-    width: 300px;
-    height: 600px;
-    top: -200px;
-    right: 18px;
-    background: var(--bs-dark);
-    /*transform: rotate(-18deg);*/
-    z-index: -1;
-}
-
-.header-top .navbar-brand {
-    position: relative;
-    z-index: 99;
-}
-
-.nav-bar .navbar {
-    z-index: 9;
-}
-
-.navbar-light .navbar-brand img {
-    max-height: 60px;
-    transition: .5s;
-}
-
-.nav-bar .navbar-light .navbar-brand img {
-    max-height: 50px;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-    padding: 0;
-}
-
-.navbar .navbar-nav .nav-item {
+.social-links {
     display: flex;
     align-items: center;
-    padding: 0;
-    margin-right: 20px;
+    gap: 10px;
 }
 
-.navbar-light .navbar-nav .nav-item:hover,
-.navbar-light .navbar-nav .nav-item.active,
-.navbar-light .navbar-nav .nav-item:hover .nav-link,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: var(--bs-primary);
+.main-nav {
+    background-color: transparent;
+    position:absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
 }
 
-@media (max-width: 991px) {
-    .navbar {
-        padding: 20px 0;
-    }
-
-    .navbar .navbar-nav .nav-link {
-        padding: 0;
-    }
-
-    .navbar .navbar-nav .nav-item {
-        display: flex;
-        padding: 12px;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-    }
-
-    .navbar .navbar-nav .nav-btn {
-        display: flex;
-        justify-content: start;
-    }
-
-    .navbar .navbar-nav {
-        width: 100%;
-        display: flex;
-        margin-top: 20px;
-        padding-bottom: 20px;
-        margin-left: 50px;
-        background: var(--bs-light);
-    }
-
-    .navbar .navbar-nav .nav-btn {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar .navbar-nav .nav-btn a.btn {
-        margin-right: 15px;
-    }
-
-    .navbar.navbar-expand-lg .navbar-toggler {
-        padding: 8px 15px;
-        border: none;
-        background: var(--bs-primary);
-        color: var(--bs-dark);
-        transform: skew(18deg);
-    }
-
-    .navbar.navbar-expand-lg .navbar-toggler span {
-        transform: skew(-18deg);
-    }
+.navbar-nav {
+    margin-left: auto;
+}
+.navbar-nav .nav-link {
+    padding: 10px 20px;
+}
+/* Add this to your CSS file to give the navbar a smooth transition */
+.navbar-transparent {
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust transparency */
+    transition: background-color 0.3s ease;
 }
 
-.navbar .dropdown-toggle::after {
+.navbar-transparent.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken when scrolling */
+}
+
+.navbar-toggler {
     border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    vertical-align: middle;
-    margin-left: 8px;
+    background: transparent;
 }
 
-.dropdown .dropdown-menu .dropdown-item:hover {
-    background: var(--bs-primary);
-    color: var(--bs-white);
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0,0,0,0.75)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"%3E%3C/path%3E%3C/svg%3E');
 }
 
-@media (min-width: 992px) {
-    .navbar {
-        padding: 20px 0;
+.nav-item .nav-link {
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-item .nav-link:hover {
+    color: red;
+}
+.nav-item .nav-link {
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus,
+.nav-item .nav-link:active,
+.nav-item .nav-link.active {
+    color: red !important;
+}
+
+.talk-btn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.talk-btn:hover {
+    background-color: red;
+}
+.text-red {
+    color: red;
+    font-size: 15px;  /* Optional: adjust the size of the pipe symbol */
+    display: inline-block;  /* Ensure it behaves like inline text */
+    vertical-align: middle; /* Aligns the pipe symbol with text vertically */
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .top-bar {
+        text-align: center;
     }
 
-    .navbar .navbar-nav .nav-btn {
-        display: inline-flex;
-        margin-left: auto;
-        background: transparent;
-    }
-
-    .navbar .navbar-nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--bs-light);
-        border-radius: 10px;
-    }
-
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-        border: 0;
-        transition: .5s;
-        opacity: 0;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        transform: rotateX(0deg);
-        visibility: visible;
-        margin-top: 19px;
-        background: var(--bs-white);
-        transition: .5s;
-        opacity: 1;
+    .navbar-collapse {
+        text-align: center;
+        background: white;
+        padding: 10px 0;
     }
 
     .navbar-nav {
-        background: transparent !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .nav-shaps-1 {
-        position: absolute;
-        overflow: hidden;
-        min-width: calc(100% - 81%);
-        height: 100%;
-        top: 0;
-        right: 0;
-        /*transform: skew(18deg);*/
-        background: var(--bs-dark);
-        z-index: -1;
+    .nav-item {
+        margin-bottom: 10px;
     }
 
-    .nav-shaps-2 {
-        position: absolute;
-        overflow: hidden;
-        width: 12%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: var(--bs-dark);
-        z-index: -1;
+    .talk-btn {
+        display: block;
+        margin-top: 15px;
     }
 }
-/*** Navbar End ***/
 
+/*** Navbar End ***/
+.navbar {
+    margin-top: 50px; /* Adds space between the top bar and navbar */
+}
+
+/* Ensures the navbar links align with the content on the right side */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Adds gap between the tire image and content */
+.home-section .row {
+    gap: 0px; /* Adds space between the image and the content */
+}
+
+.tire-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    text-align: left;
+    padding-left: 20px;
+}
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
@@ -458,253 +312,386 @@
 /*** Single Page Hero Header End ***/
 
 
-/*** Carousel Hero Header Start ***/
-.hero-section {
-    background-image: url(../img/carousel-1.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+/* Custom Container */
+/* Custom Container */
+/* Custom Container */
+.custom-container {
+    width: 90%;  /* Adjust this as needed to add space on the left and right */
+    max-width: 1584px; /* You can set a maximum width */
+    margin: 7px auto; /* Center-align the custom container */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* For the Home Section */
+.home-section {
+    padding-top: 120px; /* Space between navbar and home section */
+}
+
+/* Ensure that the Navbar is also aligned properly with the custom container */
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navbar container - remove left and right padding */
+.navbar .container {
+    padding-left: 0; /* Align navbar items with home section */
+    padding-right: 0; /* Optional: Remove right padding to maintain uniformity */
+}
+
+/* Increase space between logo and navbar items */
+.navbar-brand {
+    margin-right: 20rem; /* Adjust this value to add space between logo and nav items */
+}
+
+/* Align navbar items in the center */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centers the nav items between the logo and the right section */
     width: 100%;
-    height: 700px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    margin-left: 0; /* Remove any default margin */
 }
 
-.hero-bg-half-1 {
-    background-image: url(../img/header-2.jpg);
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-    filter: grayscale(15%);
-    transform: scale(100% - 50%);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 58%;
-    height: 100%;
-    right: 0;
-    top: 0;
+.navbar-nav .nav-item {
+    margin-left: 30px;  /* Add space between nav items */
 }
 
-.hero-bg-half-2 {
-    background-image: url(../img/header-1.jpg);
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-    filter: grayscale(15%);
-    transform: scale(100% - 50%);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 58%;
-    height: 100%;
-    right: 0;
-    top: 0;
+/* Navbar links */
+.navbar-nav .nav-link {
+    padding-left: 15px;  /* Optional: A little space between the links */
 }
 
-@media (max-width: 991px) {
-    .hero-bg-half-1 {
-        background-image: url(../img/header-2.jpg);
-        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-        filter: grayscale(0%);
-        transform: scale(100% - 0%);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        top: 0;
-    }
-
-    .hero-bg-half-2 {
-        background-image: url(../img/header-1.jpg);
-        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-        filter: grayscale(0%);
-        transform: scale(100% - 0%);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        top: 0;
-    }
+/* Optional: Adjust logo size */
+.navbar-brand img {
+    height: 75px; /* Adjust as necessary */
 }
 
-/*** Carousel Hero Header Start ***/
-.header-carousel .header-carousel-item {
-    height: 700px;
+/* Home Section Adjustments */
+.home-section .custom-container {
+    padding-left: 0; /* No padding on the left side to align with the navbar */
+    padding-right: 0; /* Optional: Remove right padding */
 }
 
-.header-carousel .owl-nav .owl-prev,
-.header-carousel .owl-nav .owl-next {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    /*transform: skew(18deg);*/
-    background: var(--bs-white);
-    color: var(--bs-primary);
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
+/* Align the title to the left within the home section */
+.home-section .col-lg-6 {
+    padding-left: 0; /* Removes excessive left padding */
+    text-align: left; /* Align text to the left */
 }
 
-.header-carousel .owl-nav .owl-prev {
-    bottom: 30px;
-    left: 51%;
-}
-.header-carousel .owl-nav .owl-next {
-    bottom: 30px;
-    right: 51%;
+/* Optional: Adjust the title's padding for a bit more control */
+.home-section .content h1 {
+    margin-left: 0; /* Align title directly to the left edge */
 }
 
-.header-carousel .owl-nav .owl-prev:hover,
-.header-carousel .owl-nav .owl-next:hover {
-    background: var(--bs-primary);
-    color: var(--bs-white);
+/* Optional: Spacing between navbar and home section */
+.home-section {
+    padding-top: 100px; /* Adjust this padding to create space between navbar and home section */
 }
 
-.header-carousel .header-carousel-item .carousel-caption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .4);
-    display: flex;
-    align-items: center;
-    z-index: 9;
+/* Optional: Add styling for right-aligned items like buttons (if needed) */
+.navbar .d-flex.align-items-center {
+    margin-left: auto; /* Aligns right-aligned items to the right */
 }
 
-@media (max-width: 991px) {
-    .header-carousel .header-carousel-item .carousel-caption {
-        padding-top: 45px;
-    }
 
-    .header-carousel.owl-carousel,
-    .header-carousel .header-carousel-item {
-        height: 700px;
-    }
-}
+
 /*** Carousel Hero Header End ***/
 
 
-/*** About Start ***/
-.about {
-    position: relative;
-    overflow: hidden;
-    background: var(--bs-dark);
+/*logo set*/
+/* Logo Bar Section */
+/* About Section */
+/* About Section */
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-@media (min-width: 992px) {
-    .about::before {
-        content: "";
-        position: absolute;
-        width: 70%;
-        height: 100%;
-        top: 0;
-        right: -400px;
-        background: var(--bs-primary);
-        /*transform: skew(28deg);*/
-    }
+/* Card Styling */
+.about-section{
+    background: #FAC302;
+    margin-top: 0px; /* Push the About Card deeper into the logo bar */
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
-    .about .about-content {
-        margin-bottom: 60px;
-    }
 }
 
-@media (max-width: 991px) {
-    .about::after {
-        content: "";
-        position: absolute;
-        width: 70%;
-        height: 100%;
-        top: 0;
-        left: -400px;
-        background: var(--bs-primary);
-        /*transform: skew(28deg);*/
-    }
 
-    .about .about-content {
-        margin-bottom: 0px !important;
-    }
-}
-
-.about .about-content {
-    position: relative;
-    z-index: 9;
-}
-
-.about .about-img {
-    position: relative;
-    z-index: 10;
-}
-
-.about .tab-class .nav .nav-item a {
-    position: relative;
-    /*transform: skew(18deg);*/
-    text-align: center;
-    background: var(--bs-white);
-    color: var(--bs-dark);
-}
-
-.about .tab-class .nav .nav-item a span {
-    /*transform: skew(-18deg);*/
-}
-
-.about .tab-class .nav .nav-item a.active {
-    background: var(--bs-primary);
-    color: var(--bs-white);
-}
-/*** About End ***/
-
-/*** Fitness Goal Start ***/
-.goal {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(255, 245, 225, 0.9), rgba(12, 24, 68, 0.9)), url(../img/goal-background-img.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+.about-card {
+    position: relative; /* Ensure the card is the reference for absolute positioning */
+    background: linear-gradient(to right, rgba(0, 0, 0, 1.7), rgba(0, 0, 0, 0.5) 90%), url('../img/AboutImage.png');
     background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 50px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-.goal::after {
-    content: "";
+/* Card Left Content */
+.card-left {
+    padding-right: 20px; /* Space between text and edge */
+    z-index: 1; /* Ensures text stays on top of the background */
+}
+
+.about-heading {
+    font-size: 36px;
+    font-weight: normal;
+    color: white; /* White text to stand out on the dark background */
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: white; /* White text for better readability */
+}
+
+/* Card Right Content (Tire Mark) */
+/* Card Right Content (Tire Mark) */
+.card-right {
+    position: relative; /* Ensure it's positioned relative for absolute positioning of the tire mark */
+    display: flex;
+    justify-content: flex-end; /* Align the tire mark to the right */
+    align-items: flex-start; /* Align the tire mark with the top */
+    z-index: 1; /* Ensures tire image stays above the background */
+    height: 100%; /* Ensures the column takes full height */
+}
+
+.tire-mark {
+    position:absolute; /* Position the tire mark at the top right */
+    top: 0px; /* Adjust this value to move the tire mark down or up */
+    right: -30px; /* Adjust this value to move the tire mark left or right */
+    width: 60%; /* Adjust the width of the tire mark image */
+}
+
+.tire-mark img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-heading {
+        font-size: 30px;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+
+    .card-left {
+        padding-right: 0;
+    }
+
+    .tire-mark img {
+       display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* Logo Bar Section */
+.logo-bar {
+    background-color: white;
+    padding: 30px 0;
+}
+
+/* Center the logos in the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Style each logo item */
+.logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Adjust logo size */
+.logo-item img {
+    max-height: 60px;
+    object-fit: contain;
+    margin: 0 20px;
+}
+
+/* Responsive Adjustment for smaller screens */
+@media (max-width: 768px) {
+    .logo-item {
+        flex: 1 1 30%;
+    }
+
+    .logo-item img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-item {
+        flex: 1 1 45%;
+    }
+
+    .logo-item img {
+        max-height: 40px;
+    }
+}
+
+
+
+/*service */
+/* General Styles */
+/* General Styles */
+.container-fluid.goal {
+    font-family: Arial, sans-serif;
+    background-color: #FAC302;
+    margin: 0;
+    padding: 20px;
+    padding-top: 5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Service Title with Shadow Effect */
+.services-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.shadow-text {
     position: absolute;
-    width: 60%;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 7rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Service Card Container */
+.service-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+/* Card styling */
+.service-card {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: visible; /* Allow the image to go outside the card */
+    text-align: center;
+    margin: auto;
     height: 100%;
+    z-index: 1;
+}
+
+/* Tire Image (Pop Out of the Left Top) */
+.service-card-icon-wrapper {
+    position: absolute;
+    top: -50px; /* Moves the tire image above the card */
+    left: -72px; /* Moves the tire image to the left outside the card */
+    width: 150px; /* Adjust the size as needed */
+    height: 180px;
+    z-index: 2; /* Ensure tire image is above the card */
+    overflow: visible; /* Allows the tire to go outside the card */
+}
+
+/* Tire Image */
+.service-card-tire-image {
+    width: 100%; /* Tire image will take up the full width of the container */
+    height: auto;
+    object-fit: cover; /* Ensures tire image is proportionally adjusted */
+}
+
+/* Tyre Pattern (Smaller and Positioned on Top Right) */
+.service-card-pattern-wrapper {
+    position: absolute;
     top: 0;
     right: 0;
-    margin-right: -200px;
-    /*transform: skew(18deg);*/
-    background: rgba(200, 0, 54, .1);
+    z-index: 1; /* Ensure pattern stays beneath the tire image */
+    width: 90%; /* Adjust size to be smaller */
 }
 
-.goal .goal-item {
-    /*transform: skew(10deg);*/
-    box-shadow: 0 0 45px rgba(12, 24, 68, 0.4);
-    margin: 0 15px 15px 15px;
+.service-card-tyre-pattern {
+    width: 100%; /* Make the pattern stretch within its container */
+    height: auto;
 }
 
-@media (min-width: 992px) {
-    .goal .goal-content {
-        padding-bottom: 80px;
+/* Title */
+.service-card-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    color: black;
+    margin-top: 40px;
+}
+
+/* Description */
+.service-card-description {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .service-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .service-card-icon-wrapper {
+        left: 0; /* Tire image will be inside the card on mobile */
+    }
+    .service-card-pattern-wrapper {
+        width: 100%; /* Pattern will take full width on smaller screens */
     }
 }
 
-@media (max-width: 991px) {
-    .goal .goal-content {
-        padding-bottom: 0;
-    }
-}
-/*** Fitness Goal End ***/
 
-/*** Features Start ***/
+/*service end*/
+
+
 .feature {
     overflow: hidden;
 }
