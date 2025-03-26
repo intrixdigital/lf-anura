@@ -471,13 +471,15 @@
 }
 
 .about-heading {
-    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    font-size: 31px;
     font-weight: normal;
     color: white; /* White text to stand out on the dark background */
 }
 
 .about-text {
-    font-size: 18px;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
     line-height: 1.8;
     color: white; /* White text for better readability */
 }
@@ -590,7 +592,6 @@
 /* General Styles */
 /* General Styles */
 .container-fluid.goal {
-    font-family: Arial, sans-serif;
     background-color: #FAC302;
     margin: 0;
     padding: 20px;
@@ -614,11 +615,14 @@
     font-weight: bold;
     position: relative;
     z-index: 2;
+    color: #141414;
+    font-family: "Roboto", sans-serif;
 }
 
 .shadow-text {
     position: absolute;
-    top: -36px;
+    top: -44px;
+    font-family: "Roboto", sans-serif;
     left: 50%;
     transform: translateX(-50%) translateY(-10px);
     font-size: 7rem;
@@ -687,16 +691,16 @@
 
 /* Title */
 .service-card-title {
-    font-family: 'Arial', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 20px;
     color: black;
     margin-top: 40px;
 }
 
 /* Description */
 .service-card-description {
-    font-family: 'Arial', sans-serif;
+    font-family:  poppins, sans-serif;
     font-weight: normal;
     font-size: 16px;
     color: #555;
