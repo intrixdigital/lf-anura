@@ -390,6 +390,35 @@
     padding-top: 100px; /* Adjust this padding to create space between navbar and home section */
 }
 
+
+.home-button{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 45px;
+    background: linear-gradient(to right, #F4EB04, #FAC302, #FFA600);
+    border: 3px solid black;
+    color: black;
+}
+.text-home-desc{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+.text-sub-home{
+    color: #FB3535;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 31px;
+}
+.text-main-home{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 31px;
+}
+
 /* Optional: Add styling for right-aligned items like buttons (if needed) */
 .navbar .d-flex.align-items-center {
     margin-left: auto; /* Aligns right-aligned items to the right */
