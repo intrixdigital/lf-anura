@@ -15,32 +15,24 @@
 /*** Spinner End ***/
 
 /* back-to-to */
-.back-to-top a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 50px;
-    right: 40px;
-    width: 50px;
-    height: 40px;
-    margin: 0px;
-    font-size: 18px;
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    transition: 0.5s;
-    z-index: 999;
-    /*transform: skew(18deg);*/
-}
+/*.back-to-top a {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: fixed;*/
+/*    bottom: 50px;*/
+/*    right: 40px;*/
+/*    width: 50px;*/
+/*    height: 40px;*/
+/*    margin: 0px;*/
+/*    font-size: 18px;*/
+/*    background: var(--bs-primary);*/
+/*    color: var(--bs-white);*/
+/*    transition: 0.5s;*/
+/*    z-index: 999;*/
+/*    !*transform: skew(18deg);*!*/
+/*}*/
 
-.back-to-top a i {
-    /*transform: skew(-18deg);*/
-}
-
-.back-to-top a:hover {
-    background: var(--bs-dark);
-    color: var(--bs-white); 
-}
 
 /*** Button Start ***/
 .btn {
@@ -180,7 +172,7 @@
 }
 /* Add this to your CSS file to give the navbar a smooth transition */
 .navbar-transparent {
-    background-color: rgba(255, 255, 255, 0.2); /* Adjust transparency */
+   // background-color: rgba(255, 255, 255, 0.2); /* Adjust transparency */
     transition: background-color 0.3s ease;
 }
 
@@ -217,15 +209,6 @@
     color: red !important;
 }
 
-.talk-btn {
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 8px 15px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-}
 
 .talk-btn:hover {
     background-color: red;
@@ -254,6 +237,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .nav-item {
@@ -263,6 +247,71 @@
     .talk-btn {
         display: block;
         margin-top: 15px;
+    }
+}
+@media (max-width: 768px) {
+    /* Center the top bar */
+    .top-bar {
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    /* Navbar styling for mobile */
+    .navbar-collapse {
+        text-align: center;
+        background: white;
+        padding: 15px 0;
+    }
+
+    /* Make nav items stack vertically */
+    .navbar {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+
+    }
+    .home-button{
+        margin-bottom: 20px;
+    }
+
+
+    .services-shadow-text{
+        position: absolute;
+        top: -28px!important;
+        font-family: "Roboto", sans-serif;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        font-size: 6rem!important;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    .services-title{
+        font-size: 2.5rem;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+        color: #141414;
+        font-family: "Roboto", sans-serif;
+    }
+    .places-of-location-shadow-text{
+        position: absolute;
+        top: -28px!important;
+        font-family: "Roboto", sans-serif;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        font-size: 6rem!important;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .places-of-location-title{
+        font-size: 2.5rem;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+        color: #141414;
+        font-family: "Roboto", sans-serif;
     }
 }
 
@@ -715,7 +764,8 @@
         margin: 10px 0;
     }
     .service-card-icon-wrapper {
-        left: 0; /* Tire image will be inside the card on mobile */
+        width: 25%;
+        left: -25px; /* Tire image will be inside the card on mobile */
     }
     .service-card-pattern-wrapper {
         width: 100%; /* Pattern will take full width on smaller screens */
@@ -1071,7 +1121,14 @@
     width: 50%;  /* Adjust the size of the icon */
 }
 
+@media (max-width: 768px) {
+.footer-social-icons{
+    margin-bottom: 20px;
+}
 
+
+
+}
 
 /*** copyright end ***/
 
