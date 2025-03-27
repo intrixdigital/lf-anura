@@ -1059,7 +1059,7 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: yellow; /* Yellow Background */
+    background-color: #FAC302; /* Yellow Background */
     border-radius: 50%;       /* Circle Shape */
     display: flex;
     justify-content: center;
@@ -1068,13 +1068,9 @@
 
 /* Adjust icon size */
 .social-icon img {
-    width: 60%;  /* Adjust the size of the icon */
+    width: 50%;  /* Adjust the size of the icon */
 }
 
-/* Hover effect on social icons */
-.social-icon:hover {
-    background-color: #ffcc00; /* A darker yellow when hovered */
-}
 
 
 /*** copyright end ***/
