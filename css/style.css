@@ -789,154 +789,39 @@
 /*** OUTLET End ***/
 
 
-/*** Courses End ***/
 
-/*** Blog Start ***/
-.blog {
-    overflow: hidden;
-}
 
-.blog .blog-item {
+
+/*** why Start ***/
+.why-header {
     position: relative;
-    border: 1px solid var(--bs-primary);
-    transition: 0.5s;
-}
-
-.blog .blog-item .blog-content {
-    background: var(--bs-white);
-}
-
-.blog .blog-item .blog-img {
-    position: relative;
-    overflow: hidden;
-}
-
-.blog .blog-item .blog-img img {
-    transition: 0.5s;
-}
-
-.blog .blog-item:hover .blog-img img {
-    transform: scale(1.3);
-}
-
-.blog .blog-item .blog-img::after {
-    content: "";
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /*transform: skew(100deg);*/
-    background: rgba(200, 0, 54, 1);
-    border: none;
-    transition: 0.5s;
-    z-index: -1;
-}
-
-.blog .blog-item .blog-img::before {
-    content: "";
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /*transform: skew(-100deg);*/
-    background: rgba(12, 24, 68, 1);
-    border: none;
-    transition: 0.5s;
-    z-index: -1;
-}
-
-.blog-content .blog-comment {
-    /*transform: skew(8deg);*/
-    background: rgba(12, 24, 68, 1);
-}
-
-.blog-content .blog-comment div.small,
-.blog-content .blog-comment span {
-    /*transform: skew(-4deg);*/
-}
-
-.blog-carousel .owl-stage-outer {
-    margin-right: -1px;
-}
-
-.blog-carousel .owl-dots {
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.blog-carousel .owl-dots .owl-dot {
-    width: 30px;
-    height: 30px;
-    margin: 30px 10px 0 10px;
-    background: var(--bs-dark);
-    /*transform: skew(18deg);*/
-    transition: 0.5s;
-}
-
-.blog-carousel .owl-dots .owl-dot.active {
-    width: 30px;
-    height: 50px;
-    background: var(--bs-primary);
-    transition: 0.5s;
-}
-
-.blog-carousel .owl-dots .owl-dot span {
+.why-title {
+    font-size: 3.5rem;
+    font-weight: bold;
     position: relative;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    margin-right: -1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    z-index: 2;
+    color: #FAC302;
+    font-family: "Roboto", sans-serif;
 }
 
-.blog-carousel .owl-dots .owl-dot.active span::after {
-    background: var(--bs-white);
-    height: 30px;
-    margin-top: 10px;
-}
-
-.blog-carousel .owl-dots .owl-dot span::after {
-    content: "";
-    width: 15px;
-    height: 15px;
+.why-shadow-text {
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--bs-primary);
-    transition: 0.5s;
+    top: -44px;
+    font-family: "Roboto", sans-serif;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 7rem;
+    font-weight: bold;
+    color: #FFFFFF3D;
+    z-index: 1;
 }
-/*** Blog End ***/
-
-/*** Explore Fitness Start ***/
-.explore {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.7), rgba(12, 24, 68, 0.7)), url(../img/services-img.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/*** Explore Fitness End ***/
-
-/*** Team Start ***/
 .team {
     overflow: hidden;
+    background: #232323;
 }
 
 .team .team-item {
@@ -1032,196 +917,161 @@
 }
 /*** Team End ***/
 
-/*** Testimonial Start ***/
-.testimonial {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.9), rgba(12, 24, 68, 0.9)), url(../img/services-img.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/*** location places Start ***/
 
-.testimonial-item {
+
+.places-of-location-header {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.testimonial-item .quote-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: var(--bs-white);
-}
-
-.testimonial-item .testimonial-img {
-    border: 2px solid var(--bs-primary);
-}
-
-.testimonial-item .testimonial-img img {
-    width: 100px; 
-    height: 100px;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 0;
-    /*transform: skew(18deg);*/
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev i,
-.testimonial-carousel .owl-nav .owl-next i {
-    /*transform: skew(-18deg);*/
-}
-
-.testimonial-carousel .owl-nav .owl-prev {
-    left: 0;
-}
-.testimonial-carousel .owl-nav .owl-next {
-    right: 0;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--bs-white);
-    color: var(--bs-primary);
-}
-/*** Testimonial End ***/
-
-/*** Conatct Start ***/
-.contact {
-    overflow: hidden;
-}
-
-.contact .form-section form .form-section-col {
-    /*transform: skewX(18deg);*/
-    margin: 0 12px;
-}
-
-.contact .contact-banner {
+.places-of-location-title {
+    font-size: 3.5rem;
+    font-weight: bold;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    border: 2px solid var(--bs-dark);
-    background: linear-gradient(rgba(255, 245, 225, 0.2), rgba(12, 24, 68, 0.1), rgba(200, 0, 54, 0.3));
+    z-index: 2;
+    color: #141414;
+    font-family: "Roboto", sans-serif;
 }
 
-.contact .contact-banner::after {
-    content: "";
+.places-of-location-shadow-text {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    bottom: 0;
-    right: 0;
-    background-image: url(../img/contact-banner.png);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+    top: -44px;
+    font-family: "Roboto", sans-serif;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 7rem;
+    font-weight: bold;
+    color: #1414143D;
+    z-index: 1;
 }
 
-.contact form button {
-    border: none;
-    transition: 0.5s;
-}
-
-.contact form button:hover {
-    background: var(--bs-white);
-    color: var(--bs-primary);
-}
-/*** Contact End ***/
-
-/*** Footer Start ***/
-.footer {
+.places-of-location {
     overflow: hidden;
-    background: linear-gradient(rgba(12, 24, 68, 0.9), rgba(12, 24, 68, 0.98)), url(../img/services-img.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #FFFFFF;
 }
 
-.footer button {
+.places-of-location .places-of-location-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.places-of-location .card {
+    box-shadow: none;
     border: none;
+}
+
+.location-img {
+    width: 20%;  /* Full width */
+    height: auto;  /* Automatic height to maintain aspect ratio */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 0px!important;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: poppins, sans-serif;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.places-of-location .places-of-location-item .places-of-location-img img {
     transition: 0.5s;
 }
 
-.footer button:hover {
-    background: var(--bs-white);
-    color: var(--bs-dark);
+.places-of-location .places-of-location-item:hover .places-of-location-img img {
 }
 
-.footer .footer-item {
-    display: flex;
-    flex-direction: column;
+
+
+.places-of-location .places-of-location-item:hover .places-of-location-content,
+.places-of-location .places-of-location-item:hover .places-of-location-img {
+    border: none;
 }
 
-.footer .footer-item .footer-item-img {
-    /*transform: matrix(1, -0.09, 0, 1, 0, 0);*/
-    transition: 0.5s;
-}
 
-.footer .footer-item .footer-item-img:hover {
-    transform: matrix(1, 0.09, 0, 1, 0, 0);
-}
 
-.footer .footer-item .footer-item-img img {
-    filter: grayscale(50%);
-    transition: 0.5s;
-}
-
-.footer .footer-item .footer-item-img:hover img {
-    filter: grayscale(0%);
-}
-
-.footer .footer-item a {
-    line-height: 35px;
+.places-of-location .places-of-location-item  p {
+    margin-bottom: 10px;
     font-size: 16px;
-    font-weight: 500;
-    color: var(--bs-white);
-    transition: 0.5s;
+    font-weight: 300;
+    font-family: poppins, sans-serif;
+    color: #000000;
+
 }
 
-.footer .footer-item p {
-    line-height: 35px;
-}
 
-.footer .footer-item a:hover {
-    letter-spacing: 1px;
-    color: var(--bs-primary);
-}
 
-.footer .footer-item .footer-btn a {
-    transition: 0.5s;
-}
 
-.footer .footer-item .footer-btn a:hover {
-    background: var(--bs-white);
-}
 
-.footer .footer-item .footer-btn a:hover {
-    color: var(--bs-primary);
-}
-/*** Footer End ***/
+
+
+
+
+/*** location places End ***/
+
 
 /*** copyright Start ***/
-.copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark);
+
+/* Footer Styles */
+/* Footer Styling */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Distribute elements to left, center, and right */
+    align-items: center;
 }
+
+.footer .footer-brand img {
+    height: 130px;
+
+}
+
+/* Centered Footer Text */
+.footer-copyright {
+    text-align: center;
+    flex-grow: 1; /* Take up available space to center */
+}
+
+/* Social Icons Container */
+.footer-social-icons {
+    display: flex;
+    justify-content: flex-end; /* Align social icons to the right */
+}
+
+/* Individual Social Icon Styles */
+.social-icon {
+    margin: 0 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: yellow; /* Yellow Background */
+    border-radius: 50%;       /* Circle Shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust icon size */
+.social-icon img {
+    width: 60%;  /* Adjust the size of the icon */
+}
+
+/* Hover effect on social icons */
+.social-icon:hover {
+    background-color: #ffcc00; /* A darker yellow when hovered */
+}
+
+
 /*** copyright end ***/
 
 
