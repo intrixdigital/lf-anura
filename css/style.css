@@ -1032,13 +1032,16 @@
 }
 
 .footer .footer-brand img {
-    height: 130px;
-
+    height: 150px;
+    position: relative;
+    top: -40px;
 }
 
 /* Centered Footer Text */
 .footer-copyright {
     text-align: center;
+    position: relative;
+    bottom: -30px;
     flex-grow: 1; /* Take up available space to center */
 }
 
@@ -1046,6 +1049,8 @@
 .footer-social-icons {
     display: flex;
     justify-content: flex-end; /* Align social icons to the right */
+    position: relative;
+    bottom: -10px;
 }
 
 /* Individual Social Icon Styles */
